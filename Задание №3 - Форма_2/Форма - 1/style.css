@@ -1,0 +1,70 @@
+body{
+    background-color: rgba(211, 211, 211, 0.350);
+    font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    box-sizing: border-box;
+}
+b{
+    
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    padding: 30px;
+    color: #403866;
+}
+input[type=text], input[type=password]{
+    width: 300px;
+    height: 60px;
+    color: #403866;
+    font-size: 18px;
+    padding: 0 20px 0 35px;
+    margin: 15px 120px;
+    background-color: #e6e6e6;
+    font-weight: bold;
+    border-color: rgba(255, 255, 255, 0);
+}
+span{
+    float: right;
+    margin-right: 120px;
+    margin-top: 12px;
+}
+a{
+    text-decoration: none;
+    color: #827ffe;
+    font-size: 18px;
+    
+}
+input[type=submit]{
+    font-size: 16px;
+    color: #fff;
+    margin-left: 20%;
+    margin-top: 3%;
+    width: 360px;
+    height: 60px;
+    background-color: #827ffe;
+    border-radius: 3px;
+    border-color: rgba(255, 255, 255, 0);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.checkbox::hover{
+    border: 2px solid red;
+}
+.checkbox{
+    width: 18px;
+    height: 18px;
+    margin-left: 120px;
+    margin-top: 12px;
+    
+}
+.checkbox+label{
+    color: #999999;
+    font-size: 18px;
+    cursor: pointer;
+}
+.window{
+    width: 600px;
+    height: 500px;
+    background-color: white;
+    margin: 100px auto;
+}
