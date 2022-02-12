@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="font/stylesheet.css">
+
+
+        <title>Страница товара</title>
+    </head>
+
+    <body>
+        <script src="js/skript.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/notify.js"></script>
+        <div class="layout">
+            <div class="product">
+                <div class="product__preview">
+                    <div class="preview-left">
+                        <img src="img/reversal.jpg" class="foto-left" alt="Воротник рубашки">
+                        <img src="img/sleeve.jpg" class="foto-left" alt="Манжеты рубашки">
+                        <img src="img/back.jpg" class="foto-left" alt="Спина рубашки">
+                    </div>
+                    <div class="preview-center">
+                        <img src="img/face.jpg" class="foto" alt="Рубашка">
+                    </div>
+                </div>
+
+                <div class="product__description">
+                    <h2 class="product__title">Рубашка medicine</h2>
+                    <div class="product__categories">
+                        <a href="#">Рубашки Medicine</a>
+                        <a href="#">Все модели Medicine</a>
+                        <a href="#">Рубашки</a>
+                    </div>
+                    <div class="product__price">
+                        <div class="product__price-actual">
+                            <span class="product__price-old price">2 699</span>
+                            <span class="product__price-current price">2 499
+                            </span>
+                        </div>
+                        <div class="product__price-discount">
+                            <span class="product__price-discount price">2 227</span>
+                            <span class="product__price-discount-text"> - с промокодом</span>
+                        </div>
+                    </div>
+                    <div class="product__info">
+                        <img src="img/yes.svg" width="20" alt="Есть в наличии">
+                        <span>В наличии в магазине <a href="#">Lamoda</a> </span>
+                        <br>
+                        <img src="img/car.svg" width="20" alt="Доставка">
+                        <span>Бесплатная доставка</span>
+                    </div>
+
+                    <div class="product__button_quantity">
+                        <div class="quantity-block">
+                            <button class="quantity-arrow-minus quantity-arrow"> 
+                                <img src="img/minus.png" alt="" width="20">
+                            </button>
+                            <input class="quantity-num" type="number" value="1" />
+                            <button class="quantity-arrow-plus quantity-arrow">
+                                <img src="img/plus.png" alt="" width="20">
+                            </button>
+                          </div>
+                      </div>
+
+                    <div class="product__actions">
+                        <button class="custom-btn custom-btn-blue" onclick="onClickButton()">Купить</button>
+                        <button class="custom-btn">В избранное</button>
+                    </div>
+
+                    <div class="product__text">
+                        <p> Рубашка Medicine выполнена из вискозной ткани с клетчатым узором. <br>
+                            Детали: прямой крой; отложной воротник; планка и манжеты на
+                            пуговицах; карман на груди.
+                        </p>
+                    </div>
+                    <div class="product__share">
+                        <span class="product__share-title">Поделиться: </span>
+                        <div class="product__share-list">
+                            <a href="#"><img src="img/vk.svg" alt="VK" width="30"></a>
+                            <a href="#"><img src="img/google.svg" alt="google" width="30"></a>
+                            <a href="#"><img src="img/facebook.svg" alt="facebook" width="30"></a>
+                            <a href="#"><img src="img/twitter.svg" alt="twitter" width="30"></a>
+                        </div>
+                        <div class="product__share-count">
+                            <img src="img/notification.png" alt="Количество уведомлений" width="60">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script>
+            $(function() {
+
+            (function quantityProducts() {
+            var $quantityArrowMinus = $(".quantity-arrow-minus");
+            var $quantityArrowPlus = $(".quantity-arrow-plus");
+            var $quantityNum = $(".quantity-num");
+
+            $quantityArrowMinus.click(quantityMinus);
+            $quantityArrowPlus.click(quantityPlus);
+
+            function quantityMinus() {
+            if ($quantityNum.val() > 1) {
+            $quantityNum.val(+$quantityNum.val() - 1);
+            }
+            }
+
+            function quantityPlus() {
+            $quantityNum.val(+$quantityNum.val() + 1);
+            }
+            })();
+
+            });
+        </script>
+    </body>
+</html>
